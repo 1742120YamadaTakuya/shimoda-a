@@ -1,0 +1,24 @@
+.indexTitle{
+    width: 50vw;
+    height: 80vh;
+    margin: 3vh 0% 2vh 0%;
+    margin-right: auto;
+    float : left;
+}
+
+.selectTable {
+    width: 50vw;
+    height: 70vh;
+}
+
+.selectItem {
+    width: 50vw;
+    height: 20vh;
+    margin-left: auto;
+}
+.selectItemChild {
+    width: 45vw;
+    height: 20vh;
+    margin: 3.75vh 0 3.75vh 0;
+    margin-left: auto;
+}

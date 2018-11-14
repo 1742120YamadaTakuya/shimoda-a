@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PM実験 津田沼駅周辺 ラーメンおてがる検索サイト こだわり検索</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="pc.css" media="screen and (orientation: landscape)">
+<link rel="stylesheet" href="search/style.css">
+<link rel="stylesheet" href="search/sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="search/pc.css" media="screen and (orientation: landscape)">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.min.js"></script>
+<script type="text/javascript" src="https://underscorejs.org/underscore-min.js"></script>
+<script type="text/javascript" src="search/script.js"></script>
+</head>
+<body>
+
+    <table>
+        <tbody id='csv-body' />
+    </table>
+
+    <h2>こだわり検索</h2>
+    <div>好みの項目を押そう</div>
+<div class="chineseMark">
+
+</div>
+<div>         
+        <h4 style="display: inline-block;">スープ</h4>
+        <input type="checkbox" name="tag" value="醤油" id="soySauceSoup" class="choiceBox" />
+        <label for="soySauceSoup" class="choiceLabelMini">醤油</label>
+        <input type="checkbox" name="tag" value="味噌" id="MisoSoup" class="choiceBox" />
+        <label for="MisoSoup" class="choiceLabelMini">味噌</label>
+        <input type="checkbox" name="tag" value="豚骨" id="PorkBonesSoup" class="choiceBox" />
+        <label for="PorkBonesSoup" class="choiceLabelMini">豚骨</label>
+        <input type="checkbox" name="tag" value="魚介" id="SeafoodSoup" class="choiceBox" />
+        <label for="SeafoodSoup" class="choiceLabelMini">魚介</label>
+        <input type="checkbox" name="tag" value="鶏ガラ" id="chickenBrothSoup" class="choiceBox" />
+        <label for="chickenBrothSoup" class="choiceLabelMini">鶏ガラ</label>
+        <input type="checkbox" name="tag" value="塩" id="saltSoup" class="choiceBox" />
+        <label for="saltSoup" class="choiceLabelMini">塩</label>
+        <input type="checkbox" name="tag" value="その他" id="otherSoup" class="choiceBox" />
+        <label for="otherSoup" class="choiceLabelMini">その他</label>
+
+        <table>
+            <tr>
+                <td><h4 style="display: inline-block;">脂の量</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="こってり" id="greasy0" class="choiceBox" />
+                    <label for="greasy0" class="choiceLabel" style="font-size:calc(70% + 25% * var(--isPc))">こってり</label>
+                    <input type="checkbox" name="tag" value="普通" id="greasy1" class="choiceBox" checked="checked"/>
+                    <label for="greasy1" class="choiceLabel">普通</label>
+                    <input type="checkbox" name="tag" value="あっさり" id="greasy2" class="choiceBox" />
+                    <label for="greasy2" class="choiceLabel" style="font-size:calc(70% + 25% * var(--isPc))">あっさり</label>
+                </td>
+            </tr
+            <tr>
+                <td><h4 style="display: inline-block;">麺の太さ</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="太め" id="thickness0" class="choiceBox" />
+                    <label for="thickness0" class="choiceLabel">太め</label>
+                    <input type="checkbox" name="tag" value="普通" id="thickness1" class="choiceBox" checked="checked"/>
+                    <label for="thickness1" class="choiceLabel">普通</label>
+                    <input type="checkbox" name="tag" value="細め" id="thickness2" class="choiceBox" />
+                    <label for="thickness2" class="choiceLabel">細め</label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4 style="display: inline-block;">麺の固さ</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="固め" id="firmness0" class="choiceBox" />
+                    <label for="firmness0" class="choiceLabel">固め</label>
+                    <input type="checkbox" name="tag" value="普通" id="firmness1" class="choiceBox" checked="checked"/>
+                    <label for="firmness1" class="choiceLabel">普通</label>
+                    <input type="checkbox" name="tag" value="柔め" id="firmness2" class="choiceBox" />
+                    <label for="firmness2" class="choiceLabel">柔め</label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4 style="display: inline-block;">値段</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="高め" id="price0" class="choiceBox" />
+                    <label for="price0" class="choiceLabel">高め</label>
+                    <input type="checkbox" name="tag" value="普通" id="price1" class="choiceBox" checked="checked"/>
+                    <label for="price1" class="choiceLabel">普通</label>
+                    <input type="checkbox" name="tag" value="安め" id="price2" class="choiceBox" />
+                    <label for="price2" class="choiceLabel">安め</label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4 style="display: inline-block;">系統</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="家系" id="system0" class="choiceBox" />
+                    <label for="system0" class="choiceLabel">家系</label>
+                    <input type="checkbox" name="tag" value="二郎系" id="system1" class="choiceBox" />
+                    <label for="system1" class="choiceLabel">二郎系</label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4 style="display: inline-block;">その他</h4>
+                </td>
+                <td>
+                    <input type="checkbox" name="tag" value="麺類" id="other0" class="choiceBox" />
+                    <label for="other0" class="choiceLabel">麺類</label>
+                    <input type="checkbox" name="tag" value="映える" id="other1" class="choiceBox" />
+                    <label for="other1" class="choiceLabel">映える</label>
+                    <input type="checkbox" name="tag" value="個性的" id="other2" class="choiceBox" />
+                    <label for="other2" class="choiceLabel">個性的</label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4 style="display: inline-block;">店名</h4>
+                    <td>
+                        <input type="text" name="filter_free" size="32" />
+                        <button type='button' name='free_submit'>検索</button>
+                    </td>
+            </tr>
+        </table>        
+
+    </div>                         
+</div>
+
+<div class="chineseMark"></div>
+
+<div class="resultArea">
+    <div class="productCntArea"></div>
+    <div class="productArea"></div>    
+</div>
+
+
+<!--画像引用
+    
+-->
+</body>
+</html>

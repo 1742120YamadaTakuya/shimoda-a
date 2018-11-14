@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<!--
+    HP作成:1742120 山田拓也
+-->
+<head>
+<meta charset="UTF-8">
+<title>PM実験 津田沼駅周辺 ラーメンおてがる検索サイト</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="pc.css" media="screen and (orientation: landscape)">
+<link rel="stylesheet" href="index/style.css">
+<link rel="stylesheet" href="index/sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="index/pc.css" media="screen and (orientation: landscape)">
+</head>
+<body>
+
+<div class="chineseMark"></div>
+
+<div class="indexTitle"
+    style="font-size: calc(1.25em*var(--isPc) + 1.0em*var(--isSp)); font-family: 'HGP行書体', 'MS P明朝';
+    background-image:url(image/topRamen.jpg); background-size: cover;">
+
+    <h1 style="color:#fff; -webkit-text-stroke: 0.0375em #000;">
+        <span>津田沼駅</span><span>周辺の</span><span>ラーメン店</span><span>検索サイト</span>
+        <span style="font-size:65%;">(PM実験用)</span>
+    </h1>
+</div>
+
+<table class="selectTable">
+    <tr>
+        <td class="selectItem">
+            <div class="selectItemChild" style="background-color:#ff4; background-image:url(image/nearestMap.png); background-position: right;">
+                    <div class="selectItemChildText">最寄り検索</div>
+                    <div class="selectItemChildText" style="top: 90%; left: 5%; transform: translateY(-90%); font-size: calc(1.5vw + 2vh);">
+                        最寄りの店を検索
+                    </div>
+            </div>
+        </td>
+    </tr><tr>
+        <td class="selectItem">
+            <div class="selectItemChild" style="background-color:#f80;">
+                <div class="selectItemChildText">ざっくり検索</div>
+                <div class="selectItemChildText" style="top: 90%; left: 5%; transform: translateY(-90%); font-size: calc(1.5vw + 2vh);">
+                    選択肢からオススメの店を検索
+                </div>
+            </div>
+        </td>
+    </tr><tr>
+        <td class="selectItem">
+            <div class="selectItemChild" style="background-color:#f40;">
+                <div class="selectItemChildText">こだわり検索</div>
+                <div class="selectItemChildText" style="top: 90%; left: 5%; transform: translateY(-90%); font-size: calc(1.5vw + 2vh);">
+                        選択した麺やスープから店を検索
+                </div>
+            </div>      
+        </td>
+    </tr>
+</table>
+
+<div class="chineseMark"></div>
+
+<!--画像引用
+    トップページのラーメン : Pixabay takedahrs https://pixabay.com/ja/%E5%92%8C%E9%A3%9F-%E6%97%A5%E6%9C%AC%E9%A3%9F-%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3-%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3-%E5%A1%A9%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3-%E6%BF%B1%E5%A1%A9%E3%82%89%E3%81%82%E3%82%81%E3%82%93-2196172/
+-->
+</body>
+</html>

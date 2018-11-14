@@ -1,0 +1,61 @@
+input[type=checkbox] {
+	display: none;
+}
+
+#soySauceSoup + label {background: #800;}
+#MisoSoup + label {background: #640;}
+#PorkBonesSoup + label {background: #642;}
+#SeafoodSoup + label {background: #046;}
+#chickenBrothSoup + label {background: #640;}
+#saltSoup + label {background: #444;}
+#otherSoup + label {background: #000;}
+
+input[type="checkbox"].choiceBox:checked + label {
+	background: #fb4;
+	color: #000;
+	font-weight: bold;
+	border: 0.6vw solid #f40;
+	margin:0vw; 
+}
+
+input[type="checkbox"].choiceBox:checked#soySauceSoup + label {background: #f40;}
+input[type="checkbox"].choiceBox:checked#MisoSoup + label {background: #f80;}
+input[type="checkbox"].choiceBox:checked#PorkBonesSoup + label {background: #fdb;}
+input[type="checkbox"].choiceBox:checked#SeafoodSoup + label {background: #08f;}
+input[type="checkbox"].choiceBox:checked#chickenBrothSoup + label {background: #fb0;}
+input[type="checkbox"].choiceBox:checked#saltSoup + label {background: #0df; }
+input[type="checkbox"].choiceBox:checked#otherSoup + label {background: #fff;}
+
+
+choiceBox {
+    position: relative;
+}
+
+.choiceLabel:hover {
+	background-color: #f80;
+}
+.choiceLabel {
+	display: inline-block;
+	margin:0.5vw;
+	width:calc(10vw + 5vh);
+	height: calc(3vw + 3vh - var(--isPc)vh);
+	text-align: center;
+	cursor: pointer;
+	background-color: #ddc;
+	color: #000;
+	border: 0.1vw solid #d40;
+	border-radius: 0.2vw;
+}
+
+.choiceLabelMini {
+	display: inline-block;
+	margin:0.5vw;
+	width:calc(7.5vw + 6vh);
+	height: calc(3vw + 3vh - var(--isPc)vh);
+	font-size:90%;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	border: 0.1vw solid #d40;
+	border-radius: 0.2vw;
+}

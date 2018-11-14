@@ -1,0 +1,23 @@
+/*スクロールバー非表示*/
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.selectTable {
+    border-style: none;
+}
+
+.indexTitle{
+    background-color:#dd0;
+}
+.selectItemChild{
+    position: relative;
+}
+
+.selectItemChildText {
+    font-size: calc(2vw + 4vh);
+    position:absolute;
+    top: 10%;
+    left: 5%;
+    transform: translateY(-10%);
+}

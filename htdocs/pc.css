@@ -1,0 +1,8 @@
+body{
+    font-size:  calc(1.5vw + 1.5vh);
+}
+
+:root {
+    --isSp: 0;
+    --isPc: 1;
+  }
