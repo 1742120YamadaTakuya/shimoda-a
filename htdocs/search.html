@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>PM実験 津田沼駅周辺 ラーメンおてがる検索サイト こだわり検索</title>
+<title>PM実験 津田沼駅周辺 ラーメン店検索サイト こだわり検索</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="sp.css" media="screen and (orientation: portrait)">
@@ -24,20 +24,20 @@
 <div class="chineseMark"></div>
 
         <h4 style="display: inline-block;">スープ</h4>
-        <input type="checkbox" name="tag" value="醤油" id="soySauceSoup" class="choiceBox" />
-        <label for="soySauceSoup" class="choiceLabelMini">醤油</label>
-        <input type="checkbox" name="tag" value="味噌" id="MisoSoup" class="choiceBox" />
-        <label for="MisoSoup" class="choiceLabelMini">味噌</label>
-        <input type="checkbox" name="tag" value="豚骨" id="PorkBonesSoup" class="choiceBox" />
-        <label for="PorkBonesSoup" class="choiceLabelMini">豚骨</label>
-        <input type="checkbox" name="tag" value="魚介" id="SeafoodSoup" class="choiceBox" />
-        <label for="SeafoodSoup" class="choiceLabelMini">魚介</label>
-        <input type="checkbox" name="tag" value="鶏ガラ" id="chickenBrothSoup" class="choiceBox" />
-        <label for="chickenBrothSoup" class="choiceLabelMini">鶏ガラ</label>
-        <input type="checkbox" name="tag" value="塩" id="saltSoup" class="choiceBox" />
-        <label for="saltSoup" class="choiceLabelMini">塩</label>
-        <input type="checkbox" name="tag" value="その他" id="otherSoup" class="choiceBox" />
-        <label for="otherSoup" class="choiceLabelMini">その他</label>
+        <input type="checkbox" name="tag" value="醤油" id="Soup0" class="choiceBox" />
+        <label for="Soup0" class="choiceLabelMini">醤油</label>
+        <input type="checkbox" name="tag" value="味噌" id="Soup1" class="choiceBox" />
+        <label for="Soup1" class="choiceLabelMini">味噌</label>
+        <input type="checkbox" name="tag" value="豚骨" id="Soup2" class="choiceBox" />
+        <label for="Soup2" class="choiceLabelMini">豚骨</label>
+        <input type="checkbox" name="tag" value="魚介" id="Soup3" class="choiceBox" />
+        <label for="Soup3" class="choiceLabelMini">魚介</label>
+        <input type="checkbox" name="tag" value="鶏ガラ" id="Soup4" class="choiceBox" />
+        <label for="Soup4" class="choiceLabelMini">鶏ガラ</label>
+        <input type="checkbox" name="tag" value="塩" id="Soup5" class="choiceBox" />
+        <label for="Soup5" class="choiceLabelMini">塩</label>
+        <input type="checkbox" name="tag" value="その他" id="Soup6" class="choiceBox" />
+        <label for="Soup6" class="choiceLabelMini">その他</label>
 
         <table>
             <tr>
@@ -122,13 +122,50 @@
         </table>
         <input type="button" name="tag" value="検索" id="search" 
             class="choiceLabel" style="font-size:125%; width:calc(22.5vw + 18vh);"
-            Onclick="searchButton();" />
+            Onclick="searchButton();"/>
     </div>                         
 
 <div class="chineseMark"></div>
 
 <div id="searchResults"></div>
 
+<table class="displayTable" style="width: calc(var(--tableWidth) * 3); height:var(--tableWidth);">
+    <tr class="displayTable">
+        <td rowspan="3" class="displayTable" style="width:30%; height:100%;">
+            画像
+        </td>
+        <td colspan="4" class="displayTable" style="width:70%; height:30%;">
+            店名
+        </td>
+    </tr>
+    <tr class="displayTable">
+        <td class="displayTable" style="width:14%; height:35%;">
+            駅近
+        </td>
+        <td class="displayTable" style="width:14%; height:35%;">
+            脂
+        </td>
+        <td class="displayTable" style="width:14%; height:35%;">
+            脂
+        </td>
+        <td rowspan="2" class="displayTable" style="width:28%; height:70%;">
+            チェーン店。安くて美味しい
+        </td>
+    </tr>
+    <tr class="displayTable">
+        <td class="displayTable" style="width:14%; height:35%;">
+            駅東
+        </td>
+        <td class="displayTable" style="width:14%; height:35%;">
+            値
+        </td>
+        <td class="displayTable" style="width:14%; height:35%;">
+            特
+        </td>
+    </tr>
+</table>
+
+<br>
 
 <!--画像引用
     
