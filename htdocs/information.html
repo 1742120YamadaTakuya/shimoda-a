@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>PM実験 津田沼駅周辺 ラーメン店検索サイト 詳細情報</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="pc.css" media="screen and (orientation: landscape)">
+<link rel="stylesheet" href="information/style.css">
+<link rel="stylesheet" href="information/sp.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="information/pc.css" media="screen and (orientation: landscape)">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" defer src="information/script.js"></script>
+</head>
+
+<body>
+<h2 id="titleText" style="width: var(--TitleWidth); display:inline-block; background: #fb4;">読み込み中</h2>
+<div id="storeInfoText" style="width: var(--shopInfoWidth); display:inline-block; font-size:50%; border-style:solid;">リンクが間違っていると読み込まれません<br>ご了承ください</div>
+<div class="chineseMark"></div>
+<!--可変画像表示-->
+<div id="shopImage" style="display:inline-block;"></div>
+<script>
+document.getElementById("shopImage").innerHTML += 
+    '<div style="width:var(--shopImageWidth); height:50vh;' +
+        'background-image:url(image/shop/' + location.hash.slice(1) + '.jpg);' +
+        'background-size:cover; background-position:50%;"></div>';
+</script>
+
+<div id="pcView" style="display: inline-block;">    <!--PC向けマップ表示-->
+    <iframe id="mapPc" style="width:57.5vw; height: 50vh;" frameborder="0" style="border:0" allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4226799406842!2d140.01821851525892!3d35.69121488019201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228020c8fb87b5%3A0x2d07a7d84cb5535a!2z5rSl55Sw5rK8!5e0!3m2!1sja!2sjp!4v1543578916943">
+    </iframe>    
+</div>
+
+<div class="pcView chineseMark"></div>
+
+<div id="explanationText" style="width: var(--wideWidth); display:inline-block; text-align:left; background: #fb8;"></div>
+<div id="databaseText" style="width: var(--narrowWidth); display:inline-block; font-size: 65%; border-style:solid;">詳細情報</div>
+
+<div class="spView chineseMark"></div>
+
+<div class="spView">    <!--SP向けマップ表示-->
+    <iframe id="mapSp" style="width:90vw; height: 90vh;" frameborder="0" style="border:0" allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4226799406842!2d140.01821851525892!3d35.69121488019201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228020c8fb87b5%3A0x2d07a7d84cb5535a!2z5rSl55Sw5rK8!5e0!3m2!1sja!2sjp!4v1543578916943">
+    </iframe>
+    <br>
+</div>
+<!--画像引用
+    
+-->
+</body>
+</html>

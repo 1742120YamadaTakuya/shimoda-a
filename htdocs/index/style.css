@@ -12,6 +12,7 @@ html::-webkit-scrollbar {
 }
 .selectItemChild{
     position: relative;
+    background-position: right;  background-repeat: no-repeat;
 }
 
 .selectItemChildText {

@@ -1,0 +1,15 @@
+:root {
+    --narrowWidth: 27.5vw;
+    --wideWidth: 67.5vw;
+    --TitleWidth: 37.5vw;
+    --shopInfoWidth: 57.5vw;
+    --shopImageWidth: 37.5vw;
+  }
+
+#mapPc, .pcView {
+  display: inline-block;
+}
+
+#mapSp, .spView {
+  display: none;
+}

@@ -1,3 +1,7 @@
+:root {
+	--tableWidth : 45vh;
+  }
+
 .indexTitle{
     width: 50vw;
     height: 80vh;
